@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+<h1>Odoru</h1>
+
+{% if username == "soya" %}
+<h1>おかえりなさい</h1>
+
+{% elif username %}
+<h1>{{ username }}さん、ようこそいらっしゃいませ</h1>
+
+{% else %}
+<h1>匿名さん、ようこそ</h1>
+
+{% endif %}
+
+<p>{% now "Y年m月d日 H時i分" %}</p>
+
+
+<img src="{% static 'odoru img.jpg' %}" />
+{% endblock %}
